@@ -1,7 +1,7 @@
 This is a test deployment project.
 
 
-Steps to recreate
+Phase 1 Pre-Reqs
 
   install homebrew http://brew.sh/
 
@@ -12,13 +12,6 @@ Steps to recreate
   download ubuntu 12.04 server ISO
   http://mirror.os6.org/ubuntu//precise/ubuntu-12.04.3-server-amd64.iso
 
-
-
-  mkdir test-project-deploy-donovan
-
-  cd test-project-deploy-donovan
-
-  git init
 
   rvm install ruby-2.0.0-p353
 
@@ -40,13 +33,34 @@ Steps to recreate
 
   I also grabbed the update osx lion april 2013 command line tools since I'm on 10.7
 
+Phase 2 the project
+
+  mkdir test-project-deploy-donovan
+
+  cd test-project-deploy-donovan
+
+  git init
+
   # https://rvm.io/workflow/projects
+
   rvm --ruby-version use ruby-2.0.0-p353@test-project-deploy-donovan
 
   gem install rails -v 4.0.2
 
+Phase 3 the app
+
   rails new .
 
+  rails generate controller welcome index
 
+  make welcome#index the root route
+
+  make your changes to views/welcome/index.html.erb
+
+Phase 4 capistrano
+
+Phase 5 provisioning
+
+Phase 6 deployment
 
 

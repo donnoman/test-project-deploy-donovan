@@ -1,0 +1,9 @@
+<h1>Welcome#index</h1>
+<h1>Hello World!</h1>
+
+<% if params[:name] %>
+<!-- play with js injection, rails 4 is pretty smart about it -->
+<!-- <script>alert('Hello');</script> -->
+<!-- %3Cscript%3Ealert(%27Hello%27)%3B%3C%2Fscript%3E -->
+<h1>Hello <%= params[:name] %>!</h1>
+<% end %>
