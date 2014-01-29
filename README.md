@@ -9,12 +9,11 @@ Phase 1 Pre-Reqs
 
   install virtualbox  https://www.virtualbox.org/wiki/Downloads
 
-  download ubuntu 12.04 server ISO
-  http://mirror.os6.org/ubuntu//precise/ubuntu-12.04.3-server-amd64.iso
+  install vagrant http://www.vagrantup.com/
 
+  http://stackoverflow.com/questions/20983515/problems-installing-nokogiri-gem-on-mac-osx-snow-leopard-with-ruby-2-0-0-p353
 
-  rvm install ruby-2.0.0-p353
-
+  rvm install ruby-2.0.0-p353 --disable-binary
 
   # Requires Update to xcode >= 4.6.2 http://connect.apple.com
 
@@ -45,9 +44,14 @@ Phase 2 the project
 
   rvm --ruby-version use ruby-2.0.0-p353@test-project-deploy-donovan
 
-  gem install rails -v 4.0.2
+  vagrant init test-project-deploy-donovan-precise64 http://files.vagrantup.com/precise64.box
+
+  vagrant up
+
 
 Phase 3 the app
+
+  gem install rails -v 4.0.2
 
   rails new .
 
@@ -59,8 +63,22 @@ Phase 3 the app
 
 Phase 4 capistrano
 
+  add "gem 'cap-recipes', :git => "git@github.com:demandchain/cap-recipes.git", :require => false" to the "group :development, :test do" block.
+
+  capify
+
+  unrem load 'deploy/assets' from Capfile
+
+  modify the config/deploy.rb
+
 Phase 5 provisioning
 
-Phase 6 deployment
+Phase 6 setup
+
+phase 7 deploy:cold
+
+phase 8 deploy
+
+
 
 
