@@ -36,10 +36,12 @@ end
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn', '~> 4.8.0'
 
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
+group :development do
+  # Use Capistrano for deployment
+  gem 'cap-recipes', :git => "git@github.com:demandchain/cap-recipes.git", :require => false
+end
 
 group :development, :test do
   # Use debugger
