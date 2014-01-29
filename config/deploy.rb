@@ -1,15 +1,15 @@
-require 'cap-recipes/tasks/provison'
-require 'cap-recipes/tasks/teelogger'
-require 'cap-recipes/tasks/god'
-require 'cap-recipes/tasks/ruby19'
-require 'cap-recipes/tasks/git'
-require 'cap-recipes/tasks/nginx_unicorn'
-require 'cap-recipes/tasks/bundler'
-require 'cap-recipes/tasks/unicorn'
+require 'cap_recipes/tasks/provision'
+require 'cap_recipes/tasks/god'
+require 'cap_recipes/tasks/ruby19'
+require 'cap_recipes/tasks/git'
+require 'cap_recipes/tasks/nginx_unicorn'
+require 'cap_recipes/tasks/bundler'
+require 'cap_recipes/tasks/unicorn'
 
 set :application, "test-project-deploy-donovan"
 set :repository,  "git@github.com:donovanbray/test-project-deploy-donovan.git"
 set :scm, "git"
+set :user, "vagrant"
 
 
 set :deploy_to, "/var/www"
@@ -23,4 +23,4 @@ set :bundler_ver, "1.5.2"
 
 after "deploy:restart", "deploy:cleanup"
 
-server "10.0.2.15", :web, :app, :db, :primary => true
+server "192.168.33.10", :web, :app, :db, :primary => true
