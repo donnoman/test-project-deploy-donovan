@@ -63,13 +63,16 @@ Phase 3 the app
 
 Phase 4 capistrano
 
-  add "gem 'cap-recipes', :git => "git@github.com:demandchain/cap-recipes.git", :require => false" to the "group :development, :test do" block.
+  add "gem 'cap-recipes', :git => "git@github.com:demandchain/cap-recipes.git", :branch => 'master', :require => false" to the "group :development, :test do" block.
 
   capify
 
   unrem load 'deploy/assets' from Capfile
 
   modify the config/deploy.rb
+
+  # use the new bundler gem development override (this can replace our custom gem_dev helper)
+  bundle config --local local.cap-recipes vendor/checkouts/cap-recipes
 
 Phase 5 provisioning
 

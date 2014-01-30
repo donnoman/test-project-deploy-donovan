@@ -40,7 +40,7 @@ gem 'unicorn', '~> 4.8.0'
 
 group :development do
   # Use Capistrano for deployment
-  gem 'cap-recipes', :git => "git@github.com:demandchain/cap-recipes.git", :require => false
+  gem 'cap-recipes', :git => "git@github.com:demandchain/cap-recipes.git", :branch => "master", :require => false
 end
 
 group :development, :test do
