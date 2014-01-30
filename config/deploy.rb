@@ -1,9 +1,9 @@
 require 'cap_recipes/tasks/provision'
-require 'cap_recipes/tasks/god'
-require 'cap_recipes/tasks/ruby19'
 require 'cap_recipes/tasks/git'
-require 'cap_recipes/tasks/nginx_unicorn'
+require 'cap_recipes/tasks/ruby19'
+require 'cap_recipes/tasks/god'
 require 'cap_recipes/tasks/bundler'
+require 'cap_recipes/tasks/nginx_unicorn'
 require 'cap_recipes/tasks/unicorn'
 
 set :application, "test-project-deploy-donovan"
