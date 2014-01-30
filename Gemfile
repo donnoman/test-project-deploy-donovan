@@ -38,6 +38,8 @@ end
 # Use unicorn as the app server
 gem 'unicorn', '~> 4.8.0'
 
+gem 'rake', '~> 10.0'
+
 group :development do
   # Use Capistrano for deployment
   gem 'cap-recipes', :git => "git@github.com:demandchain/cap-recipes.git", :branch => "master", :require => false

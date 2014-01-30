@@ -71,12 +71,21 @@ Phase 4 capistrano
 
   modify the config/deploy.rb
 
+  # if you want to develop cap-recipes at the same time:
+
+  git clone git@github.com:donnoman/cap-recipes.git vendor/checkouts/cap-recipes
+
   # use the new bundler gem development override (this can replace our custom gem_dev helper)
+
   bundle config --local local.cap-recipes vendor/checkouts/cap-recipes
 
 Phase 5 provisioning
 
+  cap deploy:provision
+
 Phase 6 setup
+
+  cap deploy:setup
 
 phase 7 deploy:cold
 
