@@ -1,4 +1,5 @@
 require 'cap_recipes/tasks/provision'
+require 'cap_recipes/tasks/teelogger'
 require 'cap_recipes/tasks/git'
 require 'cap_recipes/tasks/nodejs' # Satisfies -- Could not find a JavaScript runtime. See https://github.com/sstephenson/execjs for a list of available runtimes.
 require 'cap_recipes/tasks/ruby19'
