@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:demandchain/cap-recipes.git
-  revision: 3c25d554d56b1907f26ca12d0273cdcbaccae0c4
+  revision: a4e39e9caa240f80f8828bf26ca28d7e35edc344
   branch: master
   specs:
     cap-recipes (2.3.0)
