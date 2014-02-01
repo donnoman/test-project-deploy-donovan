@@ -1,6 +1,6 @@
 GIT
-  remote: git@github.com:demandchain/cap-recipes.git
-  revision: a4e39e9caa240f80f8828bf26ca28d7e35edc344
+  remote: git@github.com:donnoman/cap-recipes.git
+  revision: bc47bc72a2a0f6977b63cee24900bb57de879875
   branch: master
   specs:
     cap-recipes (2.3.0)
@@ -81,7 +81,7 @@ GEM
       net-ssh (>= 2.6.5)
     net-sftp (2.1.2)
       net-ssh (>= 2.6.5)
-    net-ssh (2.7.0)
+    net-ssh (2.8.0)
     net-ssh-gateway (1.2.0)
       net-ssh (>= 2.6.5)
     polyglot (0.3.3)
