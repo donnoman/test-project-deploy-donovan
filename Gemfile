@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
+gem 'health-plugin', :git => 'git@github.com:demandchain/health-plugin.git', :branch => 'master'
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 

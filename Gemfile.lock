@@ -1,9 +1,19 @@
 GIT
-  remote: git@github.com:donnoman/cap-recipes.git
-  revision: bc47bc72a2a0f6977b63cee24900bb57de879875
+  remote: git@github.com:demandchain/health-plugin.git
+  revision: 892772d4ecb9c48137e3ab8d567cf03ad240ad8d
   branch: master
   specs:
-    cap-recipes (2.3.0)
+    health-plugin (0.0.3)
+      mixlib-config (~> 1.1.2)
+      rails (>= 3.1.0)
+
+GIT
+  remote: git@github.com:donnoman/cap-recipes.git
+  revision: 91fd522c769983df62e8de6a75e3c4a7699430c2
+  branch: master
+  specs:
+    cap-recipes (2.4.0)
+      capistrano
       capistrano (~> 2.0)
 
 GEM
@@ -76,6 +86,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.25.1)
     minitest (4.7.5)
+    mixlib-config (1.1.2)
     multi_json (1.8.4)
     net-scp (1.1.2)
       net-ssh (>= 2.6.5)
@@ -152,6 +163,7 @@ DEPENDENCIES
   cap-recipes!
   coffee-rails (~> 4.0.0)
   debugger
+  health-plugin!
   jbuilder (~> 1.2)
   jquery-rails
   rails (= 4.0.2)
