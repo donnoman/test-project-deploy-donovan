@@ -63,7 +63,7 @@ Phase 3 the app
 
 Phase 4 capistrano
 
-  add "gem 'cap-recipes', :git => "git@github.com:demandchain/cap-recipes.git", :branch => 'master', :require => false" to the "group :development, :test do" block.
+  add "gem 'cap-recipes', :git => "git@github.com:donnoman/cap-recipes.git", :branch => 'master', :require => false" to the "group :development, :test do" block.
 
   capify
 
@@ -89,7 +89,15 @@ Phase 6 setup
 
 phase 7 deploy:cold
 
+  cap deploy:cold
+
 phase 8 deploy
+
+  cap deploy
+
+  OR
+
+  cap deploy:migrations #(when you actually have a db to migrate)
 
 
 

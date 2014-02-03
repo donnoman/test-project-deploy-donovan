@@ -28,11 +28,15 @@ set :bundler_ver, "1.5.2"
 set :god_open_socket, true
 set :nginx_unicorn_server_name, "_"
 
-after "deploy:restart", "deploy:cleanup"
-
 after "deploy:setup" do
   sudo "chown #{user}:#{user} #{deploy_root}"
   sudo "chown -R #{user}:#{user} #{deploy_to}"
 end
+
+before "bundler:configure" do
+  utilities.apt_install "nodejs" #http://stackoverflow.com/questions/9202324/execjs-could-not-find-a-javascript-runtime-but-execjs-and-therubyracer-are-in
+end
+
+after "deploy:restart", "deploy:cleanup"
 
 server "192.168.33.10", :web, :app, :db, :primary => true
