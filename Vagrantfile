@@ -59,12 +59,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.ssh.private_key_path = ["#{ENV['HOME']}/.ssh/id_rsa","#{ENV['HOME']}/.vagrant.d/insecure_private_key"]
 
-  config.vm.provision "shell", inline: <<-SCRIPT
+  config.vm.provision :shell, inline: <<-SCRIPT
     printf "%s\n" "#{File.read("#{ENV['HOME']}/.ssh/id_rsa.pub")}" > /home/vagrant/.ssh/authorized_keys
     chown -R vagrant:vagrant /home/vagrant/.ssh
   SCRIPT
 
-  config.vm.provision "host-shell", inline: <<-SCRIPT
+  config.vm.provision :host_shell, inline: <<-SCRIPT
+    [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
     cap deploy:provision deploy:setup deploy:cold
     curl -i http://192.168.33.10/site/ping
     curl -i http://192.168.33.10/site/ident
