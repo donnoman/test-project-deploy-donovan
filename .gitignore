@@ -18,3 +18,7 @@
 /.vagrant
 
 /vendor/checkouts
+
+.ruby-gemset
+.ruby-version
+.rvmrc
