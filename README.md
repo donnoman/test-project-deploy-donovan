@@ -11,6 +11,9 @@ Phase 1 Pre-Reqs
 
   install vagrant http://www.vagrantup.com/
 
+  # install the host-shell provisioner. This allows us to send some commands to the host during a provision.
+  vagrant plugin install vagrant-host-shell
+
   http://stackoverflow.com/questions/20983515/problems-installing-nokogiri-gem-on-mac-osx-snow-leopard-with-ruby-2-0-0-p353
 
   rvm install ruby-2.0.0-p353 --disable-binary
@@ -81,6 +84,8 @@ Phase 4 capistrano
 
 Phase 5 provisioning
 
+  steps 5 - 7 are automated with the vagrant-host-shell command: cap deploy:provision deploy:setup deploy:cold
+
   cap deploy:provision
 
 Phase 6 setup
@@ -98,6 +103,9 @@ phase 8 deploy
   OR
 
   cap deploy:migrations #(when you actually have a db to migrate)
+
+
+
 
 
 

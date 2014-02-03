@@ -64,6 +64,15 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chown -R vagrant:vagrant /home/vagrant/.ssh
   SCRIPT
 
+  config.vm.provision "host-shell", inline: <<-SCRIPT
+    cap deploy:provision deploy:setup deploy:cold
+    curl -i http://192.168.33.10/site/ping
+    curl -i http://192.168.33.10/site/ident
+    echo -e
+  SCRIPT
+
+
+
   # Enable provisioning with Puppet stand alone.  Puppet manifests
   # are contained in a directory path relative to this Vagrantfile.
   # You will need to create the manifests directory and a manifest in
