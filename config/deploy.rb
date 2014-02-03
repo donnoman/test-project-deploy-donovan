@@ -11,7 +11,7 @@ require 'cap_recipes/tasks/unicorn'
 ssh_options[:forward_agent] = true
 
 set :application, "test-project-deploy-donovan"
-set :repository,  "git@github.com:donovanbray/test-project-deploy-donovan.git"
+set :repository,  "git@github.com:donnoman/test-project-deploy-donovan.git"
 set :scm, "git"
 set :user, "vagrant"
 set :deploy_via, :remote_cache
