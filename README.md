@@ -1,7 +1,6 @@
 This is a test deployment project.
 
-
-Pre-Reqs
+To use this project:
 
   install homebrew http://brew.sh/
 
@@ -17,9 +16,7 @@ Pre-Reqs
 
   http://stackoverflow.com/questions/20983515/problems-installing-nokogiri-gem-on-mac-osx-snow-leopard-with-ruby-2-0-0-p353
 
-  $rvm install ruby-2.0.0-p353 --disable-binary
-
-To use this project
+  $ rvm install ruby-2.0.0-p353 --disable-binary
 
   $ cp .ruby-version.template .ruby-version
   $ cp .ruby-gemset.template .ruby-gemset
