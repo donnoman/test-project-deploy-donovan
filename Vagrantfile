@@ -67,6 +67,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :host_shell, inline: <<-SCRIPT
     [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
     cap deploy:provision deploy:setup deploy:cold
+    echo "Deploy Finished! Checking the applications health:"
     curl -Is http://192.168.33.10/site/health
   SCRIPT
 
