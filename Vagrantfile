@@ -67,12 +67,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :host_shell, inline: <<-SCRIPT
     [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
     cap deploy:provision deploy:setup deploy:cold
-    curl -i http://192.168.33.10/site/ping
-    curl -i http://192.168.33.10/site/ident
-    echo -e
+    curl -Is http://192.168.33.10/site/health
   SCRIPT
-
-
 
   # Enable provisioning with Puppet stand alone.  Puppet manifests
   # are contained in a directory path relative to this Vagrantfile.

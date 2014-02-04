@@ -9,11 +9,10 @@ GIT
 
 GIT
   remote: git@github.com:donnoman/cap-recipes.git
-  revision: 91fd522c769983df62e8de6a75e3c4a7699430c2
+  revision: 16622e8cb4539bd98e3f61c683059f984c2b7416
   branch: master
   specs:
-    cap-recipes (2.4.0)
-      capistrano
+    cap-recipes (2.4.1)
       capistrano (~> 2.0)
 
 GEM
