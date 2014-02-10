@@ -35,7 +35,7 @@ Phase 1 the project
 
   https://rvm.io/workflow/projects
 
-  $ rvm --ruby-version use ruby-2.0.0-p353@test-project-deploy-donovan
+  $ rvm --ruby-version use ruby-2.0.0-p353@test-project-deploy-donovan --create
 
   $ vagrant init test-project-deploy-donovan-precise64 http://files.vagrantup.com/precise64.box
 
