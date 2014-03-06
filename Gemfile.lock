@@ -9,10 +9,10 @@ GIT
 
 GIT
   remote: git@github.com:donnoman/cap-recipes.git
-  revision: 16622e8cb4539bd98e3f61c683059f984c2b7416
+  revision: b07a6f5683b02b710ba028d6f1e1ccd267539729
   branch: master
   specs:
-    cap-recipes (2.4.1)
+    cap-recipes (2.4.2)
       capistrano (~> 2.0)
 
 GEM
@@ -69,7 +69,7 @@ GEM
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (2.0.2)
-    highline (1.6.20)
+    highline (1.6.21)
     hike (1.2.3)
     i18n (0.6.9)
     jbuilder (1.5.3)

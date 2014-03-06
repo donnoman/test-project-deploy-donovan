@@ -28,6 +28,10 @@ set :bundler_ver, "1.5.2"
 set :god_open_socket, true
 set :nginx_unicorn_server_name, "_"
 
+set :nginx_unicorn_src, "http://nginx.org/download/nginx-1.4.5.tar.gz"
+set :nginx_unicorn_syslog_patch_ver, "1.4.0"
+set :nginx_unicorn_rid_header_patch, true
+
 after "deploy:setup" do
   sudo "chown #{user}:#{user} #{deploy_root}"
   sudo "chown -R #{user}:#{user} #{deploy_to}"
